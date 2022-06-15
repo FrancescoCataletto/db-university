@@ -1,8 +1,8 @@
 FIRST TASK GROUP BY: Contare quanti iscritti ci sono stati ogni anno
 
-SELECT COUNT(`id`) AS `studenti_iscritti`
+SELECT COUNT(`id`) AS `studenti_iscritti`, EXTRACT(year FROM `enrolment_date`) AS year
 FROM `students`
-GROUP BY YEAR(`enrolment_date`);
+GROUP BY EXTRACT(year FROM `enrolment_date`);
 --------------------------------------------------------------------------------------
 SECOND TASK  GROUP BY: Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 
